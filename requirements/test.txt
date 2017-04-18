@@ -1,0 +1,12 @@
+pytest
+pytest-cache
+pytest-cov
+pytest-django
+coverage
+coverage-badge
+flake8
+
+git+https://github.com/DroneMapp/powerlibs.git@0.0.3
+git+https://github.com/DroneMapp/powerlibs-aws-sns.git@0.0.3
+git+https://github.com/DroneMapp/powerlibs-django-restless.git@0.1.1
+git+https://github.com/DroneMapp/powerlibs-django-contrib-eventful.git@0.0.2
