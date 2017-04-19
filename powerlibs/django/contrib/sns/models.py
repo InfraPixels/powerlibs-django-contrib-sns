@@ -1,11 +1,12 @@
 import re
 
 from powerlibs.django.restless.models import serialize_model
+from powerlibs.django.contrib.eventful.models import EventfulModelMixin
 from powerlibs.aws.sns.publisher import SNSPublisher
 from powerlibs.string_utils import snake_case
 
 
-class SNSMixin:
+class SNSMixin(EventfulModelMixin):
     _sns_publishers = {}
     _sns_publisher_class = SNSPublisher
 

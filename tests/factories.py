@@ -1,4 +1,3 @@
-from powerlibs.django.contrib.eventful.models import EventfulModelMixin
 from powerlibs.django.contrib.sns.models import CRUDNotifierMixin, ChangeNotifierMixin
 
 
@@ -17,7 +16,7 @@ class Model:
         pass
 
 
-class EventfulModel(EventfulModelMixin, Model):
+class EventfulModel(Model):
     def __init__(self, *args, **kwargs):
         self.debug_info = {
             'pre_creation_handler_called': 0,
