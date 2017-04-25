@@ -5,3 +5,4 @@ DATABASES = {
         'NAME': ':memory:',
     }
 }
+AWS_REGION='us-east-1'

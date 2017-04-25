@@ -1,5 +1,6 @@
 import re
 
+from django.conf import settings
 from powerlibs.django.restless.models import serialize_model
 from powerlibs.django.contrib.eventful.models import EventfulModelMixin
 from powerlibs.aws.sns.publisher import SNSPublisher
@@ -15,7 +16,7 @@ class SNSMixin(EventfulModelMixin):
 
     def sns_publisher(self, prefix):
         if prefix not in self._sns_publishers:
-            publisher = self._sns_publisher_class(prefix)
+            publisher = self._sns_publisher_class(prefix, region_name=settings.AWS_REGION)
             self._sns_publishers[prefix] = publisher
 
         return self._sns_publishers[prefix]
